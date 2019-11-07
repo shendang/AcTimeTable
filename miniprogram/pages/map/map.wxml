@@ -1,0 +1,9 @@
+<!--pages/map/map.wxml-->
+<scroll-view scroll-y="true" class="scroll">
+
+<image class="map" src="{{imagePath}}" mode="widthFix"></image>
+
+</scroll-view>
+<view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__text">这里是校园外面</view>
+</view>

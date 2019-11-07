@@ -1,0 +1,50 @@
+<!-- 周一至周五 -->
+<view class="top">
+  <view style="width:75rpx" bindtap="editCourse">
+  <image class="edit" src="{{imagePath_edit}}" mode="widthFix" ></image>
+  </view>
+  <view wx:for="{{weekdays}}" wx:key="{{index}}" class="top-text">
+    {{item}}
+  </view>
+</view>
+<van-notify id="van-notify" />
+
+<scroll-view scroll-y="true" class="scroll">
+
+  <view class="course_container">
+    <view>
+      <view wx:for="{{time}}" wx:key="{{index}}">
+        <view wx:for="{{weekdays}}" wx:key="{{index}}">
+          <view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
+          </view>
+        </view>
+        <view class="left">
+          {{item}}
+        </view>
+      </view>
+    </view>
+
+
+
+    <view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="{{index}}">
+      <view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#EDFFFD'}}">
+        <view class="coures_content">{{item.name}}</view>
+        <view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
+        <view class="coures_content">{{item.room}}</view>
+      </view>
+    </view>
+
+
+  </view>
+</scroll-view>
+
+
+<view class="sleep_view">
+  <image class="sleep" src="{{imagePath_sleepy}}" mode="widthFix"></image>
+</view>
+
+<view class="weui-footer weui-footer_fixed-bottom">
+  <view class="weui-footer__text">
+    <image class="sleep" src="{{imagePath_bed}}" mode="widthFix"></image>
+  </view>
+</view>

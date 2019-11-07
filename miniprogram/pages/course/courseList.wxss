@@ -1,0 +1,43 @@
+.top {
+  background-color: #fff;
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 9pt;
+  border-bottom:1rpx solid rgb(243, 238, 238);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sub_title{
+  height: 100rpx;
+  font-size: 11pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  flex-direction: row;
+}
+
+.add_button{
+  height: 100rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-right:30rpx; 
+}
+
+.course_content{
+  margin: 15px auto 15px 30rpx;
+  font-size:10pt;
+}
+
+.course_item{
+  margin-bottom: 3px;
+}
+
+.course_content_item{
+  font-size: 9pt;
+  color: rgb(110, 103, 103);
+  margin-bottom: 3px;
+}

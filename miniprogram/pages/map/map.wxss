@@ -1,0 +1,10 @@
+/* pages/map/map.wxss */
+
+.map{
+  width: 750rpx
+}
+.scroll {
+  height: 100%;
+  z-index: 101;
+  position: absolute;
+}

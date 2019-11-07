@@ -1,0 +1,52 @@
+<van-sticky>
+  <view class="top">
+    <view class="sub_title">
+      <text>Course Edit</text>
+    </view>
+    <view class="save_button">
+      <van-button size="small" type="primary" bindtap="saveCourse">Save</van-button>
+    </view>
+  </view>
+</van-sticky>
+
+<van-notify id="van-notify" />
+<van-toast id="van-toast" />
+
+
+<view class="course_content">
+  <van-cell-group>
+    <van-field value="{{ name }}" required clearable label="Name"  placeholder="please input course name" bind:blur="onNameChange" />
+
+    <van-field value="{{ room }}" label="Room" placeholder="please input classroom" required  bind:blur="onRoomChange"/>
+
+    <van-field placeholder="please choose weekday" value="{{weekday}}" label="Weekday" required disabled bindtap="showWeekdays" />
+
+    <van-field placeholder="please choose start time" value="{{startTime}}" label="StartTime" required disabled bindtap="showStartTime" />
+
+    <van-field placeholder="please choose end time" value="{{endTime}}" label="EndTime" required disabled bindtap="showEndTime" />
+  </van-cell-group>
+
+  <van-radio-group value="{{ type }}" bind:change="onRadioChange">
+    <van-cell-group>
+      <van-cell title="Theory" value-class="value-class" clickable data-name="Theory" bind:click="onRadioClick">
+        <van-radio checked-color="#07c160" name="Theory" />
+      </van-cell>
+      <van-cell title="Lab" value-class="value-class" clickable data-name="Lab" bind:click="onRadioClick">
+        <van-radio checked-color="#07c160" name="Lab" />
+      </van-cell>
+    </van-cell-group>
+  </van-radio-group>
+
+  <van-popup show="{{weekdayShow}}" bind:close="onClose" position="bottom">
+    <van-picker bind:cancel="onWeekdayCancel" bind:confirm="onWeekdayConfirm" show-toolbar columns="{{ columns }}" title="Choose Weekday" confirm-button-text="Confirm" cancel-button-text="Cancel" />
+  </van-popup>
+
+  <van-popup show="{{startTimeShow}}" bind:close="onClose" position="bottom">
+    <van-datetime-picker bind:cancel="onStartTimeCancel" bind:confirm="onStratTimeConfirm" confirm-button-text="Confirm" cancel-button-text="Cancel" type="time" value="{{ currentDate }}" filter="{{ filter }}" max-hour="{{maxHour_startTime}}" min-hour="{{minHour_startTime}}" />
+  </van-popup>
+
+  <van-popup show="{{endTimeShow}}" bind:close="onClose" position="bottom">
+    <van-datetime-picker bind:cancel="onEndTimeCancel"   bind:input="onEndTimeInput"
+bind:confirm="onEndTimeConfirm" confirm-button-text="Confirm" cancel-button-text="Cancel" type="time" value="{{ currentDate }}" filter="{{ filter }}" max-hour="{{maxHour_endTime}}" min-hour="{{minHour_endTime}}"/>
+  </van-popup>
+</view>
