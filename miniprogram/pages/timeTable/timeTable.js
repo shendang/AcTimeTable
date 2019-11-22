@@ -13,7 +13,22 @@ Page({
            "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", 
            "22:00"],
     weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
-    courseList: []
+    courseList: [],
+    showMenu : false
+  },
+
+  //展示侧边菜单栏
+  showLeftMenu: function(){
+    this.setData({
+      showMenu:true
+    })
+  },
+
+  //隐藏侧边菜单栏
+  hideLeftMenu: function(){
+    this.setData({
+      showMenu: false
+    })
   },
 
   // 获取当前用户的课程信息

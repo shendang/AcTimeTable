@@ -27,7 +27,7 @@
 
 
     <view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="{{index}}">
-      <view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#EDFFFD'}}">
+      <view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
         <view class="coures_content">{{item.name}}</view>
         <view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
         <view class="coures_content">{{item.room}}</view>
