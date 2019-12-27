@@ -97,3 +97,21 @@ background-color:  rgb(243, 238, 238);
   top:35%;
   left: 42%
 }
+
+.left_menu_content{
+  margin-top: 40px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_item{
+  margin-top: 12px;
+  display:flex;
+  align-items: center;
+}
+
+.menu_text{
+  text-align: center;
+  margin-left: 10px;
+}

@@ -1,5 +1,4 @@
 /* pages/map/map.wxss */
-
 .map{
   width: 750rpx
 }
@@ -7,4 +6,7 @@
   height: 100%;
   z-index: 101;
   position: absolute;
+}
+page {
+    background-color: rgb(255, 255, 255);
 }

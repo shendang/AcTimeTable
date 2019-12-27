@@ -3,7 +3,8 @@
     "pages/timeTable/timeTable",
     "pages/course/courseList",
     "pages/courseEdit/courseDetail",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/follow/followList"
   ],
   "window": {
     "backgroundColor": "#FFF",
@@ -11,23 +12,6 @@
     "navigationBarBackgroundColor": "#FFF",
     "navigationBarTitleText": "AcTimeTable",
     "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/timeTable/timeTable",
-        "text": "TimeTable",
-        "iconPath": "images/timeTable.png",
-        "selectedIconPath": "images/timeTable_actived.png"
-      },
-      {
-        "pagePath": "pages/map/map",
-        "text": "Map",
-        "iconPath": "images/map.png",
-        "selectedIconPath": "images/map_actived.png"
-      }
-    ]
   },
   "sitemapLocation": "sitemap.json"
 }

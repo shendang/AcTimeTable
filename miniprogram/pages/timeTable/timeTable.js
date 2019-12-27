@@ -9,6 +9,7 @@ Page({
     imagePath_sleepy: "/images/sleep.png",
     imagePath_bed: "/images/bed.png",
     imagePath_edit: "/images/edit.png",
+    imagePath_menu: "/images/menu.png",
     time: ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00",
            "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", 
            "22:00"],
@@ -66,6 +67,12 @@ Page({
       url: '../course/courseList',
     })
   },
+
+  shouwMap: function () {
+    wx.navigateTo({
+      url: '../map/map',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -84,7 +91,8 @@ Page({
    */
   onShow: function() {
     this.setData({
-      courseList: []
+      courseList: [],
+      showMenu: false
     });
     this.getUserCourseInfo();
   },

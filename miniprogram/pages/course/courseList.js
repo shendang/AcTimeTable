@@ -43,7 +43,10 @@ Page({
         });
         wx.hideLoading();
       }).catch(err => {
-        console.log(err);
+        Notify({
+          type: 'danger',
+          message: '异常，请联系管理员，微信：mum8u6'
+        });
         wx.hideLoading();
       })
   },
@@ -71,7 +74,10 @@ Page({
       // on confirm
       this.deleteCourse(id);
     }).catch(() => {
-      // on cancel
+      Notify({
+        type: 'danger',
+        message: '删除失败，请联系管理员，微信：mum8u6'
+      });
     });
   },
   //删除课程
