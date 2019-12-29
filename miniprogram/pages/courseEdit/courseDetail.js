@@ -207,7 +207,7 @@ Page({
         }).catch(err => {
           Notify({
             type: 'danger',
-            message: '保存失败，请联系管理员，微信：mum8u6'
+            message: 'Sever Error, Please Contact WeChat mum8u6'
           });
           console.log(err);
         })
@@ -228,7 +228,7 @@ Page({
       }).catch(err => {
         Notify({
           type: 'danger',
-          message: '保存失败，请联系管理员，微信：mum8u6'
+          message: 'Sever Error, Please Contact WeChat mum8u6'
         });
         console.log(err);
       })
@@ -296,7 +296,7 @@ Page({
         wx.hideLoading();
         Notify({
           type: 'danger',
-          message: '获取信息失败，请联系管理员，微信：mum8u6'
+          message: 'Sever Error, Please Contact WeChat mum8u6'
         });
       });
   },

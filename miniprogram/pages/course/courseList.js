@@ -2,6 +2,7 @@ import Dialog from 'vant-weapp/dialog/dialog';
 import Notify from 'vant-weapp/notify/notify';
 
 const db = wx.cloud.database();
+const app = getApp();
 Page({
 
   /**
@@ -19,7 +20,7 @@ Page({
       .get()
       .then(res => {
         if (res.data.length === 0) {
-          Notify({ type: 'primary', message: '暂无课程，请添加课程' });
+          Notify({ type: 'primary', message: 'No Course，Please Add' });
         }
         for (let i = 0; i < res.data.length; i++) {
           if (res.data[i].day == 1) {
@@ -45,7 +46,7 @@ Page({
       }).catch(err => {
         Notify({
           type: 'danger',
-          message: '异常，请联系管理员，微信：mum8u6'
+          message: 'Sever Error, Please Contact WeChat mum8u6'
         });
         wx.hideLoading();
       })
@@ -76,7 +77,7 @@ Page({
     }).catch(() => {
       Notify({
         type: 'danger',
-        message: '删除失败，请联系管理员，微信：mum8u6'
+        message: 'Sever Error, Please Contact WeChat mum8u6'
       });
     });
   },
@@ -99,7 +100,7 @@ Page({
       }).catch(err => {
         Notify({
           type: 'danger',
-          message: '删除失败，请联系管理员，微信：mum8u6'
+          message: 'Sever Error, Please Contact WeChat mum8u6'
         });
       })
   },
@@ -125,6 +126,7 @@ Page({
       courseList: []
     });
     this.getCourseList();
+    console.log(app.globalData.openid);
   },
 
   /**

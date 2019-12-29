@@ -1,6 +1,7 @@
 import Notify from 'vant-weapp/notify/notify';
 
 const db = wx.cloud.database();
+const app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -32,20 +33,38 @@ Page({
     })
   },
 
+  //获取用户openId
+  getOpenid: function () {
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        console.log('[云函数] [login] user openid: ', res.result.openid);
+        app.globalData.openid = res.result.openid;
+        this.getUserCourseInfo();
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
+  },
   // 获取当前用户的课程信息
   getUserCourseInfo: function(){
     wx.showLoading({
     });
-    db.collection('course').get().then(res=>{
+    db.collection('course').where({
+      _openid: app.globalData.openid
+    }).get().then(res=>{
       if (res.data.length === 0) {
-        Notify({ type: 'primary', message: '暂无课程，请点击左上角编辑课程' });
+        Notify({ type: 'primary', message: 'No Course，Please Add' });
       }
       this.setData({
         courseList: this.data.courseList.concat(res.data)
       });
       wx.hideLoading();
     }).catch(err=>{
-      Notify({ type: 'danger', message: '服务器错误，请联系管理员，微信：mum8u6' });
+      Notify({ type: 'danger', message: 'Sever Error, Please Contact WeChat mum8u6' });
       wx.hideLoading();
     })
   },
@@ -91,10 +110,10 @@ Page({
    */
   onShow: function() {
     this.setData({
-      courseList: [],
-      showMenu: false
+      courseList: []
     });
-    this.getUserCourseInfo();
+    this.getOpenid();
+  
   },
 
   /**
