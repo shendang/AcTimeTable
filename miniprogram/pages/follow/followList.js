@@ -63,7 +63,7 @@ Page({
   viewTable:function(event){
     console.log(event);
     wx.navigateTo({
-      url: `../share/share?shareOpenid=${event.target.dataset.followedopenid}&tableTitle=${event.target.dataset.title}`
+      url: `../share/share?shareOpenid=${event.target.dataset.followedopenid}&tableTitle=${event.target.dataset.title}&from=followList`
     });
   },
 

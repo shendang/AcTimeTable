@@ -28,6 +28,18 @@ Page({
       shareOpenid: options.shareOpenid,
       from:options.from
     });
+    //判断展示home按钮还是返回按钮,从关注列表进入，展示返回，从别人分享进入，显示home
+    if(options.from == 'share'){
+      this.setData({
+        showHomeButn : true
+      });
+    }else{
+      this.setData({
+        showHomeButn : false
+      });
+    }
+    console.log(this.data.showHomeButn);
+    //已关注展示红心，未关注展示空心
     if(this.ifHasFollowed()){
       this.setData({
         hasFollowed : true
@@ -63,6 +75,13 @@ Page({
       }
     })
    
+  },
+
+  //返回上一页面
+  goBack:function(){
+    wx.navigateBack({
+      complete: (res) => {},
+    })
   },
 
   /**

@@ -156,16 +156,14 @@ Page({
    */
   onShareAppMessage: function(res) {
     if (res.from === 'menu') {
-      console.log(1);
       return {
         title: 'Ac TimeTable',
         path: `/pages/timeTable/timeTable`
       }
     }else{
-      console.log(2);
       return {
         title: 'Share My TimeTable',
-        path: `/pages/share/share?shareOpenid=${app.globalData.openid}`
+        path: `/pages/share/share?shareOpenid=${app.globalData.openid}&from=share`
       }
     }
   }
