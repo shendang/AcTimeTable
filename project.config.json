@@ -42,7 +42,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -68,6 +68,13 @@
 					"id": -1,
 					"name": "courseDetail",
 					"pathName": "pages/courseEdit/courseDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "share",
+					"pathName": "pages/share/share",
 					"scene": null
 				}
 			]

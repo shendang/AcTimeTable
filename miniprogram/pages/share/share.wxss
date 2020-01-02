@@ -1,0 +1,64 @@
+/* pages/share/share.wxss */
+.flex-item {
+  width: 132rpx;
+  height: 98rpx;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  height: 55rpx;
+}
+.top_left{
+  display: flex;
+  height: 55rpx;
+  width: 75rpx;
+  background-color: #fff;
+}
+.top-text {
+  width: 135rpx;
+  height: 55rpx;
+  font-size: 9pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.course_container{
+  display:flex;
+  background-color: rgb(255, 255, 255);
+}
+
+.timeLine_col{
+ position: absolute;
+ width: 1rpx;
+ height: 60px;
+background-color:  rgb(243, 238, 238);
+}
+
+.left {
+  width: 750rpx;
+  height: 59.5px;
+  font-size: 9pt;
+  padding-left: 10rpx;
+  border-top:0.5px solid rgb(243, 238, 238);
+}
+
+.course-item {
+  word-wrap: break-word;
+  word-break: break-all;
+  position: absolute;
+  flex-direction:column;
+  border-radius: 3px;
+}
+
+.coures_content {
+  font-size: 8pt;
+  justify-content: center;
+  align-items: top;
+  padding-left: 5rpx;
+}
+
+.nav_container{
+  width: 750rpx;
+}

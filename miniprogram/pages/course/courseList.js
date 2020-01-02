@@ -14,7 +14,9 @@ Page({
 
   getCourseList: function() {
     wx.showLoading({});
-    db.collection('course')
+    db.collection('course').where({
+      _openid: app.globalData.openid 
+    })
       .orderBy('day', 'asc')
       .orderBy('start', 'asc')
       .get()
@@ -75,10 +77,7 @@ Page({
       // on confirm
       this.deleteCourse(id);
     }).catch(() => {
-      Notify({
-        type: 'danger',
-        message: 'Sever Error, Please Contact WeChat mum8u6'
-      });
+      
     });
   },
   //删除课程
@@ -126,7 +125,6 @@ Page({
       courseList: []
     });
     this.getCourseList();
-    console.log(app.globalData.openid);
   },
 
   /**

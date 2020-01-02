@@ -1,1 +1,25 @@
 /* pages/follow/followList.wxss */
+.top {
+  background-color: #fff;
+  width: 750rpx;
+  height: 100rpx;
+  font-size: 9pt;
+  border-bottom:1rpx solid rgb(243, 238, 238);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sub_title{
+  height: 100rpx;
+  font-size: 11pt;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  flex-direction: row;
+}
+
+.course_item{
+  margin-bottom: 3px;
+}

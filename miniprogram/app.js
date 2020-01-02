@@ -16,7 +16,29 @@ App({
     }
 
     this.globalData = {
-      openid:null
+      openid:null,
+      weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+      time: ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00",
+        "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00",
+        "22:00"]
     }
+
+    this.getOpenid();
+  },
+
+  getOpenid: function () {
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: 'login',
+      data: {},
+      success: res => {
+        console.log('[云函数] [login] user openid: ', res.result.openid);
+        this.globalData.openid = res.result.openid;
+      },
+      fail: err => {
+        console.error('[云函数] [login] 调用失败', err)
+      }
+    })
   }
-})
+}
+)

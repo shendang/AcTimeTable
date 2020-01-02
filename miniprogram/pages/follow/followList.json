@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "vant-weapp/button/index",
+    "van-panel": "vant-weapp/panel/index",
+    "van-sticky": "vant-weapp/sticky/index",
+    "van-dialog": "vant-weapp/dialog/index",
+    "van-toast": "vant-weapp/toast/index"
+  }
 }

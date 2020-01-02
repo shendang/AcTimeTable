@@ -111,7 +111,11 @@ background-color:  rgb(243, 238, 238);
   align-items: center;
 }
 
-.menu_text{
-  text-align: center;
-  margin-left: 10px;
+.menu_button{
+  margin-left: 0px;
+  background: none;
+}
+
+.menu_button::after{
+  border: none;
 }

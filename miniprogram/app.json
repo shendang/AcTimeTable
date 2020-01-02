@@ -4,7 +4,8 @@
     "pages/course/courseList",
     "pages/courseEdit/courseDetail",
     "pages/map/map",
-    "pages/follow/followList"
+    "pages/follow/followList",
+    "pages/share/share"
   ],
   "window": {
     "backgroundColor": "#FFF",
