@@ -15,9 +15,9 @@
 
 <view class="course_content">
   <van-cell-group>
-    <van-field value="{{ name }}" required clearable label="Name"  placeholder="please input course name" bind:blur="onNameChange" />
+    <van-field value="{{ name }}" required clearable label="Name"  placeholder="please input course name" bind:change="onNameChange" />
 
-    <van-field value="{{ room }}" label="Room" placeholder="please input classroom" required  bind:blur="onRoomChange"/>
+    <van-field value="{{ room }}" label="Room" placeholder="please input classroom" required  bind:change="onRoomChange"/>
 
     <van-field placeholder="please choose weekday" value="{{weekday}}" label="Weekday" required disabled bindtap="showWeekdays" />
 

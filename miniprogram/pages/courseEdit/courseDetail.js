@@ -138,13 +138,13 @@ Page({
   },
   onNameChange: function(event) {
     this.setData({
-      name: event.detail.value
+      name: event.detail
     })
   },
 
   onRoomChange: function(event) {
     this.setData({
-      room: event.detail.value
+      room: event.detail
     })
   },
 
