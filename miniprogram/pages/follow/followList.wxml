@@ -10,7 +10,7 @@
 <van-dialog id="van-dialog" />
 
 <view wx:for="{{followList}}" wx:key="index" class="course_item">
-	<van-panel title="{{item.title}}"  data-followedopenid = "{{item.followedOpenid}}" data-title="{{item.title}}" bindtap="viewTable" use-footer-slot>
+	<van-panel title="{{item.title}}" use-footer-slot>
   <view slot="footer" style="text-align:right;">
     <van-button size="small" data-followedopenid = "{{item.followedOpenid}}" data-title="{{item.title}}" bindtap="viewTable">Viwe</van-button>
     <van-button size="small" data-id="{{item._id}}" type="danger" bindtap="unFollowConfirm">UnFollow</van-button>
