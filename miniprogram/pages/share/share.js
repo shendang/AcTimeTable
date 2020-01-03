@@ -183,6 +183,10 @@ Page({
       Toast.fail('Has Followed');
       return;
     }
+    if(this.data.shareOpenid==''||this.data.shareOpenid==undefined){
+      Toast.fail("Title can't be empty");
+      return;
+    }
     this.setData({
       hasFollowed: true
     });
