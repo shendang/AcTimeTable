@@ -59,7 +59,7 @@
   confirmButtonText="Follow"
   cancelButtonText="Cancel"
   bind:confirm="follow"
-><van-field value="{{ tableTitle }}" required clearable label="TableTitle"  placeholder="please input table title" bind:blur="ontableTitleChange" />
+><van-field value="{{ tableTitle }}" required clearable label="TableTitle"  placeholder="please input table title" bind:blur="ontableTitleChange" bind:change="ontableTitleChange"/>
 </van-dialog>
 <!-- 周一至周五 -->
 <view class="top">
