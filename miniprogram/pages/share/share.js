@@ -236,9 +236,15 @@ Page({
       }
     })
   },
-  ontableTitleChange: function (event){
+  ontableTitleBlur: function (event){
     this.setData({
       tableTitle: event.detail.value
+    })
+  },
+
+  onTableTitleChange: function(value){
+    this.setData({
+      tableTitle: value
     })
   }
 })

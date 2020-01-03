@@ -161,6 +161,10 @@ Page({
         path: `/pages/timeTable/timeTable`
       }
     }else{
+      
+      this.setData({
+        showMenu:false
+      });
       return {
         title: 'Share My TimeTable',
         path: `/pages/share/share?shareOpenid=${app.globalData.openid}&from=share`
