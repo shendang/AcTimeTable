@@ -242,7 +242,8 @@ Page({
     })
   },
 
-  onTableTitleChange: function(value){
+  onTableTitleInput: function(value){
+    console.log(value);
     this.setData({
       tableTitle: value
     })
