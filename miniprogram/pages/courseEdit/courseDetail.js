@@ -179,6 +179,13 @@ Page({
     if (!this.checkForm()) {
       return;
     }
+    if(this.data.name.length>11){
+      Notify({
+        type: 'danger',
+        message: 'Course name no more than 11 characters'
+      });
+      return;
+    }
     wx.showLoading({
     })
     let course = {
