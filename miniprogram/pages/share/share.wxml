@@ -58,12 +58,9 @@
   show-cancel-button
   confirmButtonText="Follow"
   cancelButtonText="Cancel"
-  bind:confirm="follow"
-<<<<<<< Updated upstream
-><van-field value="{{ tableTitle }}" required clearable label="TableTitle"  placeholder="please input table title" bind:blur="ontableTitleBlur" bind:change="ontableTitleChange"/>
-=======
-><van-field value="{{ tableTitle }}" required clearable label="TableTitle"  placeholder="please input table title" bind:blur="ontableTitleChange" bind:change="ontableTitleChange"/>
->>>>>>> Stashed changes
+  bind:confirm="follow">
+  <van-field value="{{ tableTitle }}" required clearable label="TableTitle"  placeholder="please input table title" bind:blur="ontableTitleBlur" bind:change="ontableTitleChange"/>
+
 </van-dialog>
 <!-- 周一至周五 -->
 <view class="top">
