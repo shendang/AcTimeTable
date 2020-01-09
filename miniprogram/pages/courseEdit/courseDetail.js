@@ -169,9 +169,21 @@ Page({
     } else {
       minuteLong = 0;
     }
-    console.log(minuteLong);
     let long = hourLong * 2 + minuteLong;
     return long;
+  },
+
+  //根据课程时长限制name的输入长度，确保显示体验
+  checkNameLength: function(couresLong){
+    let maxNameLength = (couresLong-1)*11;
+    if(this.data.name.length>maxNameLength){
+      Notify({
+        type: 'danger',
+        message: `Name no more than ${maxNameLength} characters`
+      });
+      return false;
+    }
+    return true;
   },
 
   //保存课程
@@ -179,15 +191,12 @@ Page({
     if (!this.checkForm()) {
       return;
     }
-    if(this.data.name.length>11){
-      Notify({
-        type: 'danger',
-        message: 'Course name no more than 11 characters'
-      });
+    let long = this.getCourseLong();
+    if(!this.checkNameLength(long)){
       return;
     }
     wx.showLoading({
-    })
+    });
     let course = {
       name: this.data.name,
       room: this.data.room,
@@ -195,7 +204,7 @@ Page({
       endTime: this.data.endTime,
       day: this.getDay(),
       type: this.data.type,
-      long: this.getCourseLong(),
+      long: long,
       start: this.getStart()
     }
     if (this.data.optionType == 'edit') {
