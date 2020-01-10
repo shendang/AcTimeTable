@@ -13,7 +13,7 @@
 <van-notify id="van-notify" />
 
 
-<view wx:for="{{courseList}}" wx:key="{{index}}" class="course_item">
+<view wx:for="{{courseList}}" wx:key="index" class="course_item">
   <van-panel title="{{item.name}}" use-footer-slot>
     <view class="course_content">
       <view class="course_content_item">

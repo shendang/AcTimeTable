@@ -35,6 +35,7 @@ Page({
 
   //获取用户openId
   getOpenid: function () {
+    wx.showLoading();
     // 调用云函数
     wx.cloud.callFunction({
       name: 'login',
