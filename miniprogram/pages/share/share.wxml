@@ -4,8 +4,8 @@
   <van-nav-bar
   title="{{tableTitle}}"  
   >
-  <van-icon name="wap-home" size="25px" slot="left" bind:click="goAppHome"/>
-  <van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;" color="red" bind:click="unFollow" />
+  <van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome"/>
+  <van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" color="red" bind:click="unFollow" />
 
   </van-nav-bar>
   </view>
@@ -14,8 +14,8 @@
   <van-nav-bar
   title="{{tableTitle}}"  
   >
-  <van-icon name="arrow-left" size="25px" slot="left" bind:click="goBack"/>
-  <van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;" color="red" bind:click="unFollow" />
+  <van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goBack"/>
+  <van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" color="red" bind:click="unFollow" />
 
   </van-nav-bar>
   </view>
@@ -27,9 +27,9 @@
   <van-nav-bar
   title="{{tableTitle}}"  
   >
-  <van-icon name="wap-home" size="25px" slot="left" bind:click="goAppHome"/>
+  <van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome"/>
 
-  <van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;" bind:click="showFollowDialog" />
+  <van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
 
   </van-nav-bar>
   </view>
@@ -38,9 +38,9 @@
   <van-nav-bar
   title="{{tableTitle}}"  
   >
-  <van-icon name="arrow-left" size="25px" slot="left" bind:click="back"/>
+  <van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="back"/>
 
-  <van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;" bind:click="showFollowDialog" />
+  <van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
 
   </van-nav-bar>
   </view>
