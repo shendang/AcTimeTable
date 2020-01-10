@@ -1,5 +1,5 @@
 
-import Toast from 'vant-weapp/toast/toast';
+import Toast from '@vant/weapp/toast/toast';
 
 const db = wx.cloud.database();
 Page({

@@ -1,12 +1,12 @@
 {
   "navigationStyle": "custom",
   "usingComponents": {
-    "van-notify": "vant-weapp/notify/index",
-    "van-dialog": "vant-weapp/dialog/index",
-    "van-icon": "vant-weapp/icon/index",
-    "van-sticky": "vant-weapp/sticky/index",
-    "van-nav-bar": "vant-weapp/nav-bar/index",
-    "van-field": "vant-weapp/field/index",
-    "van-toast": "vant-weapp/toast/index"
+    "van-notify": "@vant/weapp/notify/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-toast": "@vant/weapp/toast/index"
   }
 }

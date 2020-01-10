@@ -13,6 +13,7 @@
 <view class="left_menu_content">
 <view class="menu_item" bindtap="editCourse"><van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
 <view class="menu_item" bindtap="toFollowList"><van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
+<view class="menu_item" bindtap="toFollowList"><van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
 <view class="menu_item"><van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
 <view class="menu_item" bindtap="shouwMap"><van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
 </view>

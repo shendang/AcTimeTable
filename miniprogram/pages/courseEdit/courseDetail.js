@@ -1,5 +1,5 @@
-import Toast from 'vant-weapp/toast/toast';
-import Notify from 'vant-weapp/notify/notify';
+import Toast from '@vant/weapp/toast/toast';
+import Notify from '@vant/weapp/notify/notify';
 
 const db = wx.cloud.database();
 

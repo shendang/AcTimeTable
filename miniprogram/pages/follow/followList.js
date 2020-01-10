@@ -1,6 +1,6 @@
 // pages/follow/followList.js
-import Toast from 'vant-weapp/toast/toast';
-import Dialog from 'vant-weapp/dialog/dialog';
+import Toast from '@vant/weapp/toast/toast';
+import Dialog from '@vant/weapp/dialog/dialog';
 const db = wx.cloud.database();
 const app = getApp();
 Page({

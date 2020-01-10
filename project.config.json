@@ -41,6 +41,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 4,
 			"list": [
@@ -75,6 +79,13 @@
 					"id": -1,
 					"name": "share",
 					"pathName": "pages/share/share",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "followList",
+					"pathName": "pages/follow/followList",
 					"scene": null
 				}
 			]

@@ -9,6 +9,13 @@
 <van-toast id="van-toast" />
 <van-dialog id="van-dialog" />
 
+<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+  <view slot="left">选择</view>
+  <van-cell-group>
+    <van-cell title="单元格" value="内容" />
+  </van-cell-group>
+  <view slot="right">删除</view>
+</van-swipe-cell>
 <view wx:for="{{followList}}" wx:key="index" class="course_item">
 	<van-panel title="{{item.title}}" use-footer-slot>
   <view slot="footer" style="text-align:right;">

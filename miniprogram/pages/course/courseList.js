@@ -1,5 +1,5 @@
-import Dialog from 'vant-weapp/dialog/dialog';
-import Notify from 'vant-weapp/notify/notify';
+import Dialog from '@vant/weapp/dialog/dialog';
+import Notify from '@vant/weapp/notify/notify';
 
 const db = wx.cloud.database();
 const app = getApp();
