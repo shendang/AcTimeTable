@@ -99,7 +99,7 @@ background-color:  rgb(243, 238, 238);
 }
 
 .left_menu_content{
-  margin-top: 40px;
+  margin-top: 12px;
   margin-left: 15px;
   display: flex;
   flex-direction: column;
@@ -118,4 +118,13 @@ background-color:  rgb(243, 238, 238);
 
 .menu_button::after{
   border: none;
+}
+
+.user_avatar{
+  margin-top: 60px;
+  margin-left: 30px;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
 }

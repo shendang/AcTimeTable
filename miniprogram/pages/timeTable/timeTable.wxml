@@ -10,13 +10,18 @@
 <van-notify id="van-notify" />
 <scroll-view scroll-y="true" class="scroll">
 <van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
+<view class="user_avatar">
+<open-data type="userAvatarUrl"></open-data>
+</view>
 <view class="left_menu_content">
 <view class="menu_item" bindtap="editCourse"><van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
+<view class="menu_item" bindtap="toUpload"><van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view>
 <view class="menu_item" bindtap="toFollowList"><van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
 <view class="menu_item" bindtap="toFollowList"><van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
 <view class="menu_item"><van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
 <view class="menu_item" bindtap="shouwMap"><van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
 </view>
+
 </van-popup>
   <view class="course_container">
     <view>

@@ -3,6 +3,7 @@
     "pages/timeTable/timeTable",
     "pages/course/courseList",
     "pages/courseEdit/courseDetail",
+    "pages/upload/upload",
     "pages/map/map",
     "pages/follow/followList",
     "pages/share/share"
