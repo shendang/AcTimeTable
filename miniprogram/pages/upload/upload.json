@@ -3,6 +3,7 @@
     "van-notify": "@vant/weapp/notify/index",
     "van-divider": "@vant/weapp/divider/index",
     "van-loading": "@vant/weapp/loading/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-button": "@vant/weapp/button/index"
   }
 }

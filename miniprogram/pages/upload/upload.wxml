@@ -1,9 +1,15 @@
 <van-notify id="van-notify" />
-<van-divider contentPosition="center">Plz Just Upload Your TimeTable,Thx</van-divider>
-
+<van-notice-bar
+  wrapable
+  scrollable="false"
+	left-icon="warning-o"
+  text="Strongly recommend to edit course info manually instead of uploading pictures"
+/>
 <view wx:if="{{showLoading}}" class="loading">
 	<van-loading size="24px" vertical>Uploading...</van-loading>
 </view>
 <view class="container">
 	<van-button icon="photo" type="primary" bindtap="uploadImg">Upload Pic</van-button>
+	<van-divider contentPosition="center">Plz just upload your timeTable,thx</van-divider>
 </view>
+
