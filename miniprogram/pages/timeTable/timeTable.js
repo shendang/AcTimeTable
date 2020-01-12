@@ -103,14 +103,16 @@ Page({
         success: res => {
           if (res.confirm) {
             wx.showLoading();
-            db.collection('picHomeUser').add({data:{}}).then(res=>{
+            db.collection('picHomeUser').add({
+              data: {}
+            }).then(res => {
               Notify({
                 type: 'success',
                 message: 'Successfuly setup'
               });
               this.ifPicAsHome();
               wx.hideLoading();
-            }).catch(err=>{
+            }).catch(err => {
               Notify({
                 type: 'danger',
                 message: 'Sever Error, Please Contact WeChat mum8u6'
@@ -120,19 +122,19 @@ Page({
           }
         }
       });
-    }else{
+    } else {
       wx.showLoading();
       //取消将pic设置为home
-      db.collection('picHomeUser').doc(this.data.picAsHomeId).remove().then(res=>{
+      db.collection('picHomeUser').doc(this.data.picAsHomeId).remove().then(res => {
         Notify({
           type: 'success',
           message: 'Successfuly setup'
         });
         this.setData({
-          picAsHome:false
+          picAsHome: false
         });
         wx.hideLoading();
-      }).catch(err=>{
+      }).catch(err => {
         Notify({
           type: 'danger',
           message: 'Sever Error, Please Contact WeChat mum8u6'
@@ -143,16 +145,16 @@ Page({
   },
 
   //判断用户是否设置pic为home
-  ifPicAsHome:function(){
-    db.collection('picHomeUser').get().then(res=>{
-      if(res.data.length ===1){
+  ifPicAsHome: function () {
+    db.collection('picHomeUser').get().then(res => {
+      if (res.data.length === 1) {
         this.setData({
-          picAsHome:true,
+          picAsHome: true,
           //暂存id用于删除该条数据
-          picAsHomeId:res.data[0]._id
+          picAsHomeId: res.data[0]._id
         })
       }
-    }).catch(err=>{
+    }).catch(err => {
       console.log(err);
     })
   },
@@ -201,7 +203,7 @@ Page({
     });
     this.ifPicAsHome();
     this.getOpenid();
-    
+
   },
 
   /**
@@ -236,19 +238,18 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function (res) {
-    if (res.from === 'menu') {
-      return {
-        title: 'Ac TimeTable',
-        path: `/pages/timeTable/timeTable`
-      }
-    } else {
-
+    if (res.from === 'button') {
       this.setData({
         showMenu: false
       });
       return {
         title: 'Share My TimeTable',
         path: `/pages/share/share?shareOpenid=${app.globalData.openid}&from=share`
+      }
+    } else {
+      return {
+        title: 'Ac TimeTable',
+        path: `/pages/timeTable/timeTable`
       }
     }
   }

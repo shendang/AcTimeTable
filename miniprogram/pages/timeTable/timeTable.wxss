@@ -134,3 +134,20 @@ background-color:  rgb(243, 238, 238);
   bottom: 3%;
   right: 3%;
 }
+
+
+.pic{
+  width: 750rpx
+}
+.pic_scroll {
+  height: 100%;
+  position: absolute;
+}
+
+
+.pic_home_menu{
+  position: absolute;
+  z-index: 999;
+  top: 3%;
+  left: 3%;
+}
