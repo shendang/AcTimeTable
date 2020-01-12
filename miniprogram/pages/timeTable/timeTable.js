@@ -17,7 +17,8 @@ Page({
     ],
     weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     courseList: [],
-    showMenu: false
+    showMenu: false,
+    picAsHome: false
   },
 
   //展示侧边菜单栏
@@ -87,18 +88,87 @@ Page({
     })
   },
 
+  //点击pic as home按钮
+  setPicHome({
+    detail
+  }) {
+    console.log(detail);
+    if (detail) {
+      //将pic设置为home
+      wx.showModal({
+        title: 'Warning',
+        content: 'Not recommend, continue？',
+        cancelText: 'Cancel',
+        confirmText: 'Confirm',
+        success: res => {
+          if (res.confirm) {
+            wx.showLoading();
+            db.collection('picHomeUser').add({data:{}}).then(res=>{
+              Notify({
+                type: 'success',
+                message: 'Successfuly setup'
+              });
+              this.ifPicAsHome();
+              wx.hideLoading();
+            }).catch(err=>{
+              Notify({
+                type: 'danger',
+                message: 'Sever Error, Please Contact WeChat mum8u6'
+              });
+              wx.hideLoading();
+            })
+          }
+        }
+      });
+    }else{
+      wx.showLoading();
+      //取消将pic设置为home
+      db.collection('picHomeUser').doc(this.data.picAsHomeId).remove().then(res=>{
+        Notify({
+          type: 'success',
+          message: 'Successfuly setup'
+        });
+        this.setData({
+          picAsHome:false
+        });
+        wx.hideLoading();
+      }).catch(err=>{
+        Notify({
+          type: 'danger',
+          message: 'Sever Error, Please Contact WeChat mum8u6'
+        });
+        wx.hideLoading();
+      })
+    }
+  },
+
+  //判断用户是否设置pic为home
+  ifPicAsHome:function(){
+    db.collection('picHomeUser').get().then(res=>{
+      if(res.data.length ===1){
+        this.setData({
+          picAsHome:true,
+          //暂存id用于删除该条数据
+          picAsHomeId:res.data[0]._id
+        })
+      }
+    }).catch(err=>{
+      console.log(err);
+    })
+  },
+
   editCourse: function () {
     wx.navigateTo({
       url: '../course/courseList',
     })
   },
 
-  toUpload:function(){
+  toUpload: function () {
     wx.navigateTo({
       url: '../upload/upload',
     })
   },
- 
+
   shouwMap: function () {
     wx.navigateTo({
       url: '../map/map',
@@ -126,11 +196,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log('onShow')
     this.setData({
       courseList: []
     });
+    this.ifPicAsHome();
     this.getOpenid();
+    
   },
 
   /**

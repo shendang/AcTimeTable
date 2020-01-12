@@ -99,7 +99,6 @@ background-color:  rgb(243, 238, 238);
 }
 
 .left_menu_content{
-  margin-top: 12px;
   margin-left: 15px;
   display: flex;
   flex-direction: column;

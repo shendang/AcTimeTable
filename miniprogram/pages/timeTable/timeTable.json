@@ -2,6 +2,8 @@
   "usingComponents": {
     "van-notify": "@vant/weapp/notify/index",
     "van-icon": "@vant/weapp/icon/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-switch": "@vant/weapp/switch/index",
     "van-popup": "@vant/weapp/popup/index"
   },
   "disableScroll": true

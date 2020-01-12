@@ -57,7 +57,10 @@ Page({
                     });
                     that.setData({
                       showLoading: false
-                    })
+                    });
+                    setTimeout(() => {
+                      wx.navigateBack();
+                    }, 1000);
                   }).catch(err => {
                     Notify({
                       type: 'danger',
@@ -75,7 +78,10 @@ Page({
                 });
                 that.setData({
                   showLoading: false
-                })
+                });
+                setTimeout(() => {
+                  wx.navigateBack();
+                }, 1000);
               }
               
             }).catch(err => {
