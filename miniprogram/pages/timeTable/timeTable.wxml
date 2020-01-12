@@ -1,77 +1,88 @@
-<!-- 周一至周五 -->
-<view class="top">
-	<view style="width:75rpx" bindtap="showLeftMenu">
-		<image class="edit" src="{{imagePath_menu}}" mode="widthFix"></image>
-	</view>
-	<view wx:for="{{weekdays}}" wx:key="index" class="top-text">
-		{{item}}
-	</view>
-</view>
-<van-notify id="van-notify" />
-<scroll-view scroll-y="true" class="scroll">
-	<van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
-		<view class="user_avatar">
-			<open-data type="userAvatarUrl"></open-data>
+<view wx:if="{{!picAsHome}}">
+	<view class="top">
+		<view style="width:75rpx" bindtap="showLeftMenu">
+			<image class="edit" src="{{imagePath_menu}}" mode="widthFix"></image>
 		</view>
-		<view class="left_menu_content">
-			<view class="menu_item" bindtap="editCourse">
-				<van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
-			<view class="menu_item" bindtap="toFollowList">
-				<van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
-			<view class="menu_item" bindtap="toFollowList">
-				<van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
-			<view class="menu_item">
-				<van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
-			<view class="menu_item" bindtap="shouwMap">
-				<van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
-			<view class="menu_item" bindtap="toUpload">
-				<van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view>
-			<van-divider />
-			<view class="menu_item">
-				<van-icon name="exchange" />
-				<button class="menu_button" size="mini">Pic as home</button>
+		<view wx:for="{{weekdays}}" wx:key="index" class="top-text">
+			{{item}}
+		</view>
+	</view>
+	<van-notify id="van-notify" />
+	<view class="shareBtn">
+		<button class="menu_button" open-type="share">
+			<van-icon name="share" size="40px" color="#8a8a8a" open-type="share" />
+		</button>
+	</view>
+	<scroll-view scroll-y="true" class="scroll">
+		<van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
+			<view class="user_avatar">
+				<open-data type="userAvatarUrl"></open-data>
 			</view>
-			<view class="menu_item">
-				<van-switch checked="{{ picAsHome }}" bind:change="setPicHome" size="18px" active-color="#ee0a24" />
+			<view class="left_menu_content">
+				<view class="menu_item" bindtap="editCourse">
+					<van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
+				<view class="menu_item" bindtap="toFollowList">
+					<van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
+				<view class="menu_item" bindtap="toFollowList">
+					<van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
+				<view class="menu_item">
+					<van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
+				<view class="menu_item" bindtap="shouwMap">
+					<van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
+				<view class="menu_item" bindtap="toUpload">
+					<van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view>
+				<van-divider />
+				<view class="menu_item">
+					<van-icon name="exchange" />
+					<button class="menu_button" size="mini">Pic as home</button>
+				</view>
+				<view class="menu_item">
+					<van-switch checked="{{ picAsHome }}" bind:change="setPicHome" size="18px" active-color="#ee0a24" />
+				</view>
+
 			</view>
 
-		</view>
-
-	</van-popup>
-	<view class="course_container">
-		<view>
-			<view wx:for="{{time}}" wx:key="index">
-				<view wx:for="{{weekdays}}" wx:key="index">
-					<view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
+		</van-popup>
+		<view class="course_container">
+			<view>
+				<view wx:for="{{time}}" wx:key="index">
+					<view wx:for="{{weekdays}}" wx:key="index">
+						<view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
+						</view>
+					</view>
+					<view class="left">
+						{{item}}
 					</view>
 				</view>
-				<view class="left">
-					{{item}}
+			</view>
+
+
+
+			<view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="index">
+				<view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
+					<view class="coures_content">{{item.name}}</view>
+					<view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
+					<view class="coures_content">{{item.room}}</view>
 				</view>
 			</view>
+
+
 		</view>
+	</scroll-view>
 
 
-
-		<view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="index">
-			<view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
-				<view class="coures_content">{{item.name}}</view>
-				<view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
-				<view class="coures_content">{{item.room}}</view>
-			</view>
-		</view>
-
-
+	<view class="sleep_view">
+		<image class="sleep" src="{{imagePath_sleepy}}" mode="widthFix"></image>
 	</view>
-</scroll-view>
 
-
-<view class="sleep_view">
-	<image class="sleep" src="{{imagePath_sleepy}}" mode="widthFix"></image>
+	<view class="weui-footer weui-footer_fixed-bottom">
+		<view class="weui-footer__text">
+			<image class="sleep" src="{{imagePath_bed}}" mode="widthFix"></image>
+		</view>
+	</view>
 </view>
 
-<view class="weui-footer weui-footer_fixed-bottom">
-	<view class="weui-footer__text">
-		<image class="sleep" src="{{imagePath_bed}}" mode="widthFix"></image>
-	</view>
+
+<view wx:if="{{picAsHome}}">
+	pic as Homefdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 </view>

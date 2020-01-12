@@ -44,7 +44,7 @@
 
 .scroll {
   height: 100%;
-  z-index: 101;
+  z-index: 102;
   position: absolute;
 }
 
@@ -126,4 +126,11 @@ background-color:  rgb(243, 238, 238);
   height: 150rpx;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.shareBtn{
+  position: absolute;
+  z-index: 999;
+  bottom: 3%;
+  right: 3%;
 }
