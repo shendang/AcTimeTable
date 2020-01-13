@@ -18,7 +18,8 @@ Page({
     weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     courseList: [],
     showMenu: false,
-    picAsHome: false
+    picAsHome: false,
+    picFileID:""
   },
 
   //展示侧边菜单栏
@@ -152,13 +153,27 @@ Page({
           picAsHome: true,
           //暂存id用于删除该条数据
           picAsHomeId: res.data[0]._id
-        })
+        });
+        this.getPicFileId();
       }
     }).catch(err => {
       console.log(err);
     })
   },
 
+  //获取当前用户上传的图片的fielID用于展示
+  getPicFileId:function(){
+    db.collection('image').get().then(res=>{
+    console.log(res.data[0].fileId);
+      if(res.data.length>0){
+        this.setData({
+          picFileID:res.data[0].fileId
+        });
+      }
+    }).catch(err=>{
+      console.log(err);
+    })
+  },
   editCourse: function () {
     wx.navigateTo({
       url: '../course/courseList',
@@ -203,7 +218,6 @@ Page({
     });
     this.ifPicAsHome();
     this.getOpenid();
-
   },
 
   /**

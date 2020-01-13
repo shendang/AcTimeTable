@@ -117,8 +117,7 @@
 			<van-icon name="wap-nav" size="30px" />
 		</view>
 	<scroll-view scroll-y="true" class="pic_scroll">
-		<image class="pic" src="/images/campusMap.jpg" mode="widthFix"></image>
-
+		<image class="pic" src="{{picFileID}}" mode="widthFix"></image>
 	</scroll-view>
 
 </view>
