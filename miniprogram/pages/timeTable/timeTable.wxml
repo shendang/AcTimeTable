@@ -1,4 +1,4 @@
-<view wx:if="{{!picAsHome}}">
+<!-- <view wx:if="{{!picAsHome}}"> -->
 	<view class="top">
 		<view style="width:75rpx" bindtap="showLeftMenu">
 			<image class="edit" src="{{imagePath_menu}}" mode="widthFix"></image>
@@ -12,6 +12,10 @@
 		<button class="menu_button" open-type="share">
 			<van-icon name="share" size="40px" color="#8a8a8a" open-type="share" />
 		</button>
+	</view>
+	<view class="tag">
+		<van-tag color="#AAFF99" text-color="#000000">Lab</van-tag>
+		<van-tag color="#7efff5" text-color="#000000">Theory</van-tag>
 	</view>
 	<scroll-view scroll-y="true" class="scroll">
 		<van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
@@ -29,16 +33,18 @@
 					<van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
 				<view class="menu_item" bindtap="shouwMap">
 					<van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
-				<view class="menu_item" bindtap="toUpload">
-					<van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view>
+					<!-- 暂不开放上传 -->
+				<!-- <view class="menu_item" bindtap="toUpload">
+					<van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view> -->
 				<van-divider />
-				<view class="menu_item">
+				<!-- 暂不开放切换主页 -->
+				<!-- <view class="menu_item">
 					<van-icon name="exchange" />
 					<button class="menu_button" size="mini">Pic as home</button>
 				</view>
 				<view class="menu_item">
 					<van-switch checked="{{ picAsHome }}" bind:change="setPicHome" size="18px" active-color="#ee0a24" />
-				</view>
+				</view> -->
 
 			</view>
 
@@ -80,10 +86,10 @@
 			<image class="sleep" src="{{imagePath_bed}}" mode="widthFix"></image>
 		</view>
 	</view>
-</view>
+<!-- </view> -->
 
 <!-- 如果用户的主页为自己上传的图片 -->
-<view wx:if="{{picAsHome}}" style="height:100%">
+<!-- <view wx:if="{{picAsHome}}" style="height:100%">
 	<van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
 			<view class="user_avatar">
 				<open-data type="userAvatarUrl"></open-data>
@@ -120,4 +126,4 @@
 		<image class="pic" src="{{picFileID}}" mode="widthFix"></image>
 	</scroll-view>
 
-</view>
+</view> -->
