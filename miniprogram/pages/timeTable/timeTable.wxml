@@ -26,7 +26,7 @@
 				<view class="menu_item" bindtap="editCourse">
 					<van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
 				<view class="menu_item" bindtap="toFollowList">
-					<van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
+					<van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view> 
 				<view class="menu_item" bindtap="toFollowList">
 					<van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
 				<view wx:if="{{courseList.length>0?true:false}}" class="menu_item">

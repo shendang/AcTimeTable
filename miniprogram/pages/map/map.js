@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imagePath : "/images/campusMap.jpg"
+    imagePath : "/images/campusMap-min.jpg"
   },
 
   /**
