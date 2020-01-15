@@ -1,1 +1,4 @@
 /* pages/open/openList.wxss */
+page{
+  background-color: #fff;
+}

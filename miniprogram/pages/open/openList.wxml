@@ -1,2 +1,4 @@
-<!--pages/open/openList.wxml-->
-<text>pages/open/openList.wxml</text>
+<view wx:for="{{[1,2,3]}}">
+	<van-skeleton title avatar row="3" />
+  <van-divider />
+</view>
