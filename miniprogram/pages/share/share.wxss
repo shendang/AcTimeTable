@@ -63,3 +63,9 @@ background-color:  rgb(243, 238, 238);
   width: 750rpx;
 }
 
+.tag{
+  position: fixed;
+  z-index: 999;
+  bottom: 2%;
+  right: 3%;
+}

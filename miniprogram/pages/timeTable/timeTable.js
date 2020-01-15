@@ -18,8 +18,9 @@ Page({
     weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
     courseList: [],
     showMenu: false,
-    picAsHome: false,
-    picFileID:""
+    // picAsHome: false,
+    openTable: false,
+    picFileID: ""
   },
 
   //展示侧边菜单栏
@@ -89,6 +90,19 @@ Page({
     })
   },
 
+  //公开课表
+  openMyTable:function({detail}){
+    if(detail){
+      wx.showLoading();
+      db.collection('open_table_user').add({
+        data:{
+          title:"",
+          description:""
+        }
+      })
+    }
+  },
+
   //点击pic as home按钮
   setPicHome({
     detail
@@ -104,7 +118,7 @@ Page({
         success: res => {
           if (res.confirm) {
             wx.showLoading();
-            db.collection('picHomeUser').add({
+            db.collection('pic_home_user').add({
               data: {}
             }).then(res => {
               Notify({
@@ -126,7 +140,7 @@ Page({
     } else {
       wx.showLoading();
       //取消将pic设置为home
-      db.collection('picHomeUser').doc(this.data.picAsHomeId).remove().then(res => {
+      db.collection('pic_home_user').doc(this.data.picAsHomeId).remove().then(res => {
         Notify({
           type: 'success',
           message: 'Successfuly setup'
@@ -146,34 +160,34 @@ Page({
   },
 
   //判断用户是否设置pic为home
-  ifPicAsHome: function () {
-    db.collection('picHomeUser').get().then(res => {
-      if (res.data.length === 1) {
-        this.setData({
-          picAsHome: true,
-          //暂存id用于删除该条数据
-          picAsHomeId: res.data[0]._id
-        });
-        this.getPicFileId();
-      }
-    }).catch(err => {
-      console.log(err);
-    })
-  },
+  // ifPicAsHome: function () {
+  //   db.collection('pic_home_user').get().then(res => {
+  //     if (res.data.length === 1) {
+  //       this.setData({
+  //         picAsHome: true,
+  //         //暂存id用于删除该条数据
+  //         picAsHomeId: res.data[0]._id
+  //       });
+  //       this.getPicFileId();
+  //     }
+  //   }).catch(err => {
+  //     console.log(err);
+  //   })
+  // },
 
   //获取当前用户上传的图片的fielID用于展示
-  getPicFileId:function(){
-    db.collection('image').get().then(res=>{
-    console.log(res.data[0].fileId);
-      if(res.data.length>0){
-        this.setData({
-          picFileID:res.data[0].fileId
-        });
-      }
-    }).catch(err=>{
-      console.log(err);
-    })
-  },
+  // getPicFileId:function(){
+  //   db.collection('image').get().then(res=>{
+  //   console.log(res.data[0].fileId);
+  //     if(res.data.length>0){
+  //       this.setData({
+  //         picFileID:res.data[0].fileId
+  //       });
+  //     }
+  //   }).catch(err=>{
+  //     console.log(err);
+  //   })
+  // },
   editCourse: function () {
     wx.navigateTo({
       url: '../course/courseList',
@@ -216,7 +230,7 @@ Page({
     this.setData({
       courseList: []
     });
-    this.ifPicAsHome();
+    // this.ifPicAsHome();
     this.getOpenid();
   },
 

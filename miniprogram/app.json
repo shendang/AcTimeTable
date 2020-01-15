@@ -6,6 +6,7 @@
     "pages/upload/upload",
     "pages/map/map",
     "pages/follow/followList",
+    "pages/open/openList",
     "pages/share/share"
   ],
   "window": {

@@ -1,102 +1,92 @@
 <van-sticky>
-<view wx:if="{{hasFollowed}}" class="nav_container">
-  <view  wx:if="{{showHomeButn}}">
-  <van-nav-bar
-  title="{{tableTitle}}"  
-  >
-  <van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome"/>
-  <van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" color="red" bind:click="unFollow" />
+	<view wx:if="{{hasFollowed}}" class="nav_container">
+		<view wx:if="{{showHomeButn}}">
+			<van-nav-bar title="{{tableTitle}}">
+				<van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome" />
+				<van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" color="red" bind:click="unFollow" />
 
-  </van-nav-bar>
-  </view>
+			</van-nav-bar>
+		</view>
 
-  <view  wx:if="{{!showHomeButn}}">
-  <van-nav-bar
-  title="{{tableTitle}}"  
-  >
-  <van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goBack"/>
-  <van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" color="red" bind:click="unFollow" />
+		<view wx:if="{{!showHomeButn}}">
+			<van-nav-bar title="{{tableTitle}}">
+				<van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goBack" />
+				<van-icon name="like" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" color="red" bind:click="unFollow" />
 
-  </van-nav-bar>
-  </view>
-</view>
+			</van-nav-bar>
+		</view>
+	</view>
 
-<view wx:if="{{!hasFollowed}}" class="nav_container">
+	<view wx:if="{{!hasFollowed}}" class="nav_container">
 
-<view wx:if="{{showHomeButn}}">
-  <van-nav-bar
-  title="{{tableTitle}}"  
-  >
-  <van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome"/>
+		<view wx:if="{{showHomeButn}}">
+			<van-nav-bar title="{{tableTitle}}">
+				<van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome" />
 
-  <van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
+				<van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
 
-  </van-nav-bar>
-  </view>
+			</van-nav-bar>
+		</view>
 
-<view wx:if="{{!showHomeButn}}">
-  <van-nav-bar
-  title="{{tableTitle}}"  
-  >
-  <van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="back"/>
+		<view wx:if="{{!showHomeButn}}">
+			<van-nav-bar title="{{tableTitle}}">
+				<van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="back" />
 
-  <van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
+				<van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
 
-  </van-nav-bar>
-  </view>
-  
-</view>
+			</van-nav-bar>
+		</view>
+
+	</view>
 
 
 </van-sticky>
 
+
 <van-toast id="van-toast" />
-<van-dialog
-  use-slot
-  title="Plz enter the table title"
-  show="{{ dialogShow }}"
-  show-cancel-button
-  confirmButtonText="Follow"
-  cancelButtonText="Cancel"
-  bind:confirm="follow">
-  <van-field value="{{ tableTitle }}" required clearable label="TableTitle"  placeholder="please input table title" bind:blur="ontableTitleBlur" bind:change="ontableTitleChange"/>
+<van-dialog use-slot title="Plz enter the table title" show="{{ dialogShow }}" show-cancel-button confirmButtonText="Follow" cancelButtonText="Cancel" bind:confirm="follow">
+	<van-field value="{{ tableTitle }}" required clearable label="TableTitle" placeholder="please input table title" bind:blur="ontableTitleBlur" bind:change="ontableTitleChange" />
 
 </van-dialog>
 <!-- 周一至周五 -->
 <view class="top">
-<view style="width:75rpx" >
-  </view>
-  <view wx:for="{{weekdays}}" wx:key="index" class="top-text">
-    {{item}}
-  </view>
+	<view style="width:75rpx">
+	</view>
+	<view wx:for="{{weekdays}}" wx:key="index" class="top-text">
+		{{item}}
+	</view>
 </view>
 
+<view class="tag">
+  <van-tag color="#AAFF99" text-color="#000000">Lab</van-tag>
+	<van-tag color="#7efff5" text-color="#000000">Theory</van-tag>
+</view>
 
-<scroll-view  class="scroll">
+<scroll-view class="scroll">
 
-<view class="course_container">
-    <view>
-      <view wx:for="{{time}}" wx:key="index">
-        <view wx:for="{{weekdays}}" wx:key="index">
-          <view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
-          </view>
-        </view>
-        <view class="left">
-          {{item}}
-        </view>
-      </view>
-    </view>
+	<view class="course_container">
+		<view>
+			<view wx:for="{{time}}" wx:key="index">
+				<view wx:for="{{weekdays}}" wx:key="index">
+					<view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
+					</view>
+				</view>
+				<view class="left">
+					{{item}}
+				</view>
+			</view>
+		</view>
 
 
 
-    <view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="index">
-      <view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
-        <view class="coures_content">{{item.name}}</view>
-        <view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
-        <view class="coures_content">{{item.room}}</view>
-      </view>
-    </view>
-  </view>
+		<view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="index">
+			<view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
+				<view class="coures_content">{{item.name}}</view>
+				<view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
+				<view class="coures_content">{{item.room}}</view>
+			</view>
+		</view>
+	</view>
 
 
 

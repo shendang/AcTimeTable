@@ -12,7 +12,7 @@
 <view wx:for="{{followList}}" wx:key="index">
 <van-swipe-cell  right-width="{{ 90 }}">
   <van-cell-group>
-    <van-cell title="{{item.title}}" value="swipe" data-followedopenid = "{{item.followedOpenid}}" data-title="{{item.title}}" bindtap="viewTable"/>
+    <van-cell title="{{item.title}}" value="" data-followedopenid = "{{item.followedOpenid}}" data-title="{{item.title}}" bindtap="viewTable"/>
   </van-cell-group>
   <view slot="right"><van-button type="danger" data-id="{{item._id}}" bindtap="unFollowConfirm">UnFollow</van-button></view>
 </van-swipe-cell>

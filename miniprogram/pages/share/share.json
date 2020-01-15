@@ -7,6 +7,7 @@
     "van-sticky": "@vant/weapp/sticky/index",
     "van-nav-bar": "@vant/weapp/nav-bar/index",
     "van-field": "@vant/weapp/field/index",
+    "van-tag": "@vant/weapp/tag/index",
     "van-toast": "@vant/weapp/toast/index"
   }
 }
