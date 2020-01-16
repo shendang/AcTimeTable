@@ -205,6 +205,11 @@ Page({
       url: '../map/map',
     })
   },
+  toOpenTable: function () {
+    wx.navigateTo({
+      url: '../open/openList',
+    })
+  },
 
   toFollowList: function () {
     wx.navigateTo({
