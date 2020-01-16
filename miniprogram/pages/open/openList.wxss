@@ -2,3 +2,35 @@
 page{
   background-color: #fff;
 }
+.open_table_card{
+  height: 188rpx;
+}
+.open_table_card_left{
+  height: 188rpx;
+  width: 150rpx;
+  float:left;
+}
+
+.open_table_card_right{
+  height: 188rpx;
+  overflow: hidden;
+}
+
+.open_table_user_avatar{
+  margin-top: 0px;
+  margin-left: 10px;
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.open_table_title{
+  font-size: 10pt;
+}
+
+.open_table_desc{
+  margin-top: 5px;
+  font-size: 9pt;
+  color: darkgrey;
+}

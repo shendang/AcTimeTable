@@ -1,6 +1,9 @@
 {
   "usingComponents": {
     "van-divider": "@vant/weapp/divider/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-sticky": "@vant/weapp/sticky/index",
     "van-skeleton": "@vant/weapp/skeleton/index"
   }
 }

@@ -1,4 +1,24 @@
-<view wx:for="{{[1,2,3]}}">
-	<van-skeleton title avatar row="3" />
-  <van-divider />
+<van-sticky>
+	<van-search value="{{ value }}" placeholder="Plz input keyword" />
+</van-sticky>
+<view wx:for="{{openTableList}}">
+	<van-skeleton title avatar row="3" loading="{{loading}}">
+		<view class="open_table_card">
+			<view class="open_table_card_left" data-openId="{{item.openId}}" data-title="{{item.title}}" >
+				<image class="open_table_user_avatar" src="http://www.vtiantai.net/wp-content/uploads/2019/03/a7c75f04ec1ccb7-1.jpg"></image>
+			</view>
+			<view class="open_table_card_right">
+				<view class="open_table_title">
+					{{item.title}}
+				</view>
+				<view class="open_table_desc">
+					{{item.desc}}
+				</view>
+				<!-- <view class="open_table_content-footer">
+
+				</view> -->
+			</view>
+		</view>
+	</van-skeleton>
+	<van-divider />
 </view>
