@@ -55,7 +55,7 @@ Page({
       }
     }).catch(err=>{
       wx.hideLoading();
-      Toast('Error, Plz contanct wechat mum8u6');
+      Toast('Error, Plz contanct Customer Serveice');
     })
   },
 
@@ -99,7 +99,7 @@ Page({
         this.getFollowList();
 
       }).catch(err => {
-        Toast('Error, Plz contanct wechat mum8u6');
+        Toast('Error, Plz contanct Customer Serveice');
       })
   },
   /**

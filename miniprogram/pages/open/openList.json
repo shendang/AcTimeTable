@@ -4,6 +4,7 @@
     "van-panel": "@vant/weapp/panel/index",
     "van-search": "@vant/weapp/search/index",
     "van-sticky": "@vant/weapp/sticky/index",
-    "van-skeleton": "@vant/weapp/skeleton/index"
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "van-toast": "@vant/weapp/toast/index"
   }
 }

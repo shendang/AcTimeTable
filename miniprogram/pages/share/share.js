@@ -79,9 +79,7 @@ Page({
 
   //返回上一页面
   goBack:function(){
-    wx.navigateBack({
-      complete: (res) => {},
-    })
+    wx.navigateBack()
   },
 
   /**
@@ -154,7 +152,7 @@ Page({
       });
       wx.hideLoading();
     }).catch(err => {
-      Toast('Sever Error, Please Contact WeChat mum8u6');
+      Toast('Sever Error, Please Contact Customer Serveice');
       wx.hideLoading();
     })
   },
@@ -201,7 +199,7 @@ Page({
       this.ifHasFollowed();
     }).catch(err=>{
       console.log(err);
-      Toast('Follow Failed,Plz contanct wechat mum8u6');
+      Toast('Follow Failed,Plz contanct Customer Serveice');
       this.setData({
         hasFollowed: false
       });
@@ -218,7 +216,7 @@ Page({
       this.setData({
         hasFollowed: true
       });
-      Toast('Unfollowed Failed,Plz contanct wechat mum8u6');
+      Toast('Unfollowed Failed,Plz contanct Customer Serveice');
     });
   },
 

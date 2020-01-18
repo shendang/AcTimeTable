@@ -223,7 +223,7 @@ Page({
         }).catch(err => {
           Notify({
             type: 'danger',
-            message: 'Sever Error, Please Contact WeChat mum8u6'
+            message: 'Sever Error, Please Contact Customer Serveice'
           });
           console.log(err);
         })
@@ -244,7 +244,7 @@ Page({
       }).catch(err => {
         Notify({
           type: 'danger',
-          message: 'Sever Error, Please Contact WeChat mum8u6'
+          message: 'Sever Error, Please Contact Customer Serveice'
         });
         console.log(err);
       })
@@ -312,7 +312,7 @@ Page({
         wx.hideLoading();
         Notify({
           type: 'danger',
-          message: 'Sever Error, Please Contact WeChat mum8u6'
+          message: 'Sever Error, Please Contact Customer Serveice'
         });
       });
   },

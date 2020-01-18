@@ -22,7 +22,7 @@
 	},
 	"appid": "wx1e92bac9cdba74cb",
 	"projectname": "TimeTable",
-	"libVersion": "2.8.1",
+	"libVersion": "2.10.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {

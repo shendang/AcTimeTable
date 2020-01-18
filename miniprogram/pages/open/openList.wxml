@@ -1,10 +1,23 @@
 <van-sticky>
-	<van-search value="{{ value }}" placeholder="Plz input keyword" />
+<van-search
+  value="{{ searchValue }}"
+  placeholder="Program name keyword"
+  use-action-slot
+  bind:change="onSearchChange"
+  bind:search="onSearch"
+	custom-class="search"
+>
+  <view slot="action" bind:tap="onSearchClick">search</view>
+</van-search>
 </van-sticky>
-<view wx:for="{{openTableList}}">
-	<van-skeleton title avatar row="3" loading="{{loading}}">
-		<view class="open_table_card">
-			<view class="open_table_card_left" data-openId="{{item.openId}}" data-title="{{item.title}}" >
+
+<van-toast id="van-toast" />
+<van-notify id="van-notify" />
+
+<van-skeleton title avatar row="3" loading="{{loading}}">
+	<view wx:for="{{openTableList}}" wx:key="index">
+		<view class="open_table_card" data-openId="{{item._openid}}" data-title="{{item.title}}" bindtap="showOpenTableDetail">
+			<view class="open_table_card_left">
 				<image class="open_table_user_avatar" src="http://www.vtiantai.net/wp-content/uploads/2019/03/a7c75f04ec1ccb7-1.jpg"></image>
 			</view>
 			<view class="open_table_card_right">
@@ -12,13 +25,27 @@
 					{{item.title}}
 				</view>
 				<view class="open_table_desc">
-					{{item.desc}}
+					<view>Program Name：{{item.program}}</view>
+					<view>Description: {{item.desc}}</view>
 				</view>
 				<!-- <view class="open_table_content-footer">
 
 				</view> -->
 			</view>
 		</view>
+		<van-divider />
+	</view>
+</van-skeleton>
+
+
+<!-- 为美观，加载时占位 -->
+<view wx:if="{{loading}}">
+	<van-divider />
+	<van-skeleton title avatar row="3" loading="{{loading}}">
+		<view></view>
 	</van-skeleton>
 	<van-divider />
+	<van-skeleton title avatar row="3" loading="{{loading}}">
+		<view></view>
+	</van-skeleton>
 </view>

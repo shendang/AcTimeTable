@@ -64,7 +64,7 @@ Page({
                   }).catch(err => {
                     Notify({
                       type: 'danger',
-                      message: 'Sever Error, Please Contact WeChat mum8u6'
+                      message: 'Sever Error, Please Contact Customer Serveice'
                     });
                     console.log(err);
                     that.setData({
@@ -88,7 +88,7 @@ Page({
               console.log(err);
               Notify({
                 type: 'danger',
-                message: 'Sever Error, Please Contact WeChat mum8u6'
+                message: 'Sever Error, Please Contact Customer Serveice'
               });
               that.setData({
                 showLoading: false
@@ -99,7 +99,7 @@ Page({
             console.log(err);
             Notify({
               type: 'danger',
-              message: 'Sever Error, Please Contact WeChat mum8u6'
+              message: 'Sever Error, Please Contact Customer Serveice'
             });
             that.setData({
               showLoading: false

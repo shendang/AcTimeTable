@@ -30,7 +30,7 @@
 
 		<view wx:if="{{!showHomeButn}}">
 			<van-nav-bar title="{{tableTitle}}">
-				<van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="back" />
+				<van-icon name="arrow-left" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goBack" />
 
 				<van-icon name="like-o" size="25px" slot="left" custom-style="margin-left:20px;margin-bottom: 10px;" bind:click="showFollowDialog" />
 
