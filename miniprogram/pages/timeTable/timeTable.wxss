@@ -102,6 +102,7 @@ background-color:  rgb(243, 238, 238);
   margin-left: 15px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .menu_item{
@@ -156,4 +157,9 @@ background-color:  rgb(243, 238, 238);
   z-index: 999;
   top: 3%;
   left: 3%;
+}
+
+.cutomer_service{
+  position: fixed;
+  bottom: 5%;
 }

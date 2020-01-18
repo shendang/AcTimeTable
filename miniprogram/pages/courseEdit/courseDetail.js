@@ -175,7 +175,7 @@ Page({
 
   //根据课程时长限制name的输入长度，确保显示体验
   checkNameLength: function(couresLong){
-    let maxNameLength = (couresLong-1)*11;
+    let maxNameLength = (couresLong-1)*10;
     if(this.data.name.length>maxNameLength){
       Notify({
         type: 'danger',

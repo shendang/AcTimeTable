@@ -8,6 +8,13 @@
 	</view>
 </view>
 <van-notify id="van-notify" />
+<van-toast id="van-toast" />
+<van-dialog use-slot title="Table Info" show="{{ dialogShow }}" show-cancel-button confirmButtonText="OpenTable" cancelButtonText="Cancel" bind:confirm="openMyTable">
+	<van-field value="{{ openTableTitle }}" required clearable label="Title" placeholder="Table Title" bind:blur="onOpenTableTitleBlur" bind:change="onOpenTableTitleChange" />
+	<van-field value="{{ openTableProgram }}" required clearable label="Program" placeholder="Program Name" bind:blur="openTableProgramBlur" bind:change="openTableProgramChange" />
+	<van-field value="{{ openTableDesc }}" required clearable label="Description" placeholder="Descroption" bind:blur="openTableDescBlur" bind:change="openTableDescChange" />
+</van-dialog>
+
 <view wx:if="{{courseList.length>0?true:false}}" class="shareBtn">
 	<button class="menu_button" open-type="share">
 		<van-icon name="share" size="40px" color="#8a8a8a" open-type="share" />
@@ -42,7 +49,9 @@
 				<button class="menu_button" size="mini">Open My Table</button>
 			</view>
 			<view class="menu_item">
-				<van-switch checked="{{ openTable }}" bind:change="setPicHome" size="18px" active-color="#07c160" />
+				<button class="menu_button" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
+					<van-switch checked="{{ openTable }}" bind:change="" size="18px" active-color="#07c160" /></button>
+
 			</view>
 			<!-- 暂不开放切换主页 -->
 			<!-- <view class="menu_item">
@@ -52,7 +61,10 @@
 				<view class="menu_item">
 					<van-switch checked="{{ picAsHome }}" bind:change="setPicHome" size="18px" active-color="#ee0a24" />
 				</view> -->
-
+			<view class="cutomer_service">
+				<view class="menu_item">
+					<van-icon name="chat-o" /><button class="menu_button" size="mini" open-type="contact">CustmerService</button></view>
+			</view>
 		</view>
 
 	</van-popup>

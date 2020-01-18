@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    
+
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -16,14 +16,16 @@ App({
     }
 
     this.globalData = {
-      openid:null,
+      openid: null,
       weekdays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
       time: ["8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00",
         "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00",
-        "22:00"]
+        "22:00"
+      ]
     }
 
     this.getOpenid();
+    this.getUserInfo();
   },
 
   getOpenid: function () {
@@ -39,6 +41,21 @@ App({
         console.error('[云函数] [login] 调用失败', err)
       }
     })
+  },
+
+  getUserInfo: function () {
+    let that =this;
+    // 必须是在用户已经授权的情况下调用
+    wx.getUserInfo({
+      success: function (res) {
+        var userInfo = res.userInfo
+        that.globalData.nickName = userInfo.nickName
+        that.globalData.avatarUrl = userInfo.avatarUrl
+        that.globalData.gender = userInfo.gender //性别 0：未知、1：男、2：女
+        that.globalData.province = userInfo.province
+        that.globalData.city = userInfo.city
+        that.globalData.country = userInfo.country
+      }
+    })
   }
-}
-)
+})

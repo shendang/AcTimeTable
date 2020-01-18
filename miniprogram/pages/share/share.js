@@ -173,8 +173,8 @@ Page({
 
   //关注
   follow:function(){
-    if(this.data.shareOpenid === undefined || this.data.shareOpenid === ''){
-      Toast('Error, Plz contanct wechat mum8u6');
+    if(this.data.shareOpenid.trim() === '' || this.data.shareOpenid === undefined ){
+      Toast('Error, Plz contanct customer service');
       return;
     }
     if(this.hasFollowed){

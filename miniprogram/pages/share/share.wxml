@@ -58,7 +58,7 @@
 </view>
 
 <view class="tag">
-  <van-tag color="#AAFF99" text-color="#000000">Lab</van-tag>
+	<van-tag color="#AAFF99" text-color="#000000">Lab</van-tag>
 	<van-tag color="#7efff5" text-color="#000000">Theory</van-tag>
 </view>
 

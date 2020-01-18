@@ -18,7 +18,7 @@
 	<view wx:for="{{openTableList}}" wx:key="index">
 		<view class="open_table_card" data-openId="{{item._openid}}" data-title="{{item.title}}" bindtap="showOpenTableDetail">
 			<view class="open_table_card_left">
-				<image class="open_table_user_avatar" src="http://www.vtiantai.net/wp-content/uploads/2019/03/a7c75f04ec1ccb7-1.jpg"></image>
+				<image class="open_table_user_avatar" src="{{item.avatarUrl}}"></image>
 			</view>
 			<view class="open_table_card_right">
 				<view class="open_table_title">
