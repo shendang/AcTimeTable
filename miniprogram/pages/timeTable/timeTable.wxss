@@ -13,7 +13,7 @@
   border-radius: 3px;
 }
 
-.coures_content {
+.coures-content {
   font-size: 8pt;
   justify-content: center;
   align-items: top;
@@ -26,7 +26,7 @@
   background-color: #fff;
   height: 55rpx;
 }
-.top_left{
+.top-left{
   display: flex;
   height: 55rpx;
   width: 75rpx;
@@ -55,30 +55,30 @@
   padding-left: 10rpx;
   border-top:0.5px solid rgb(243, 238, 238);
 }
-.course_container{
+.course-container{
   display:flex;
   background-color: rgb(255, 255, 255);
 }
 
-.timeLine_row{
+.timeLine-row{
  position: absolute;
  width: 750rpx;
  height: 2rpx;
  border-bottom:1rpx solid rgb(243, 238, 238);
 }
-.color_test{
+.color-test{
   background-color:  rgba(120, 255, 102, 0.568);
 }
-.timeLine_col{
+.timeLine-col{
  position: absolute;
  width: 1rpx;
  height: 60px;
 background-color:  rgb(243, 238, 238);
 }
-.footer_container{
+.footer-container{
   margin-top: 20rpx;
 }
-.sleep_view{
+.sleep-view{
   margin-top: 30rpx;
   text-align: center;
 }
@@ -98,29 +98,29 @@ background-color:  rgb(243, 238, 238);
   left: 42%
 }
 
-.left_menu_content{
+.left-menu-content{
   margin-left: 15px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.menu_item{
+.menu-item{
   margin-top: 12px;
   display:flex;
   align-items: center;
 }
 
-.menu_button{
+.menu-button{
   margin-left: 0px;
   background: none;
 }
 
-.menu_button::after{
+.menu-button::after{
   border: none;
 }
 
-.user_avatar{
+.user-avatar{
   margin-top: 60px;
   margin-left: 30px;
   width: 150rpx;
@@ -146,20 +146,20 @@ background-color:  rgb(243, 238, 238);
 .pic{
   width: 750rpx
 }
-.pic_scroll {
+.pic-scroll {
   height: 100%;
   position: absolute;
 }
 
 
-.pic_home_menu{
+.pic-home-menu{
   position: absolute;
   z-index: 999;
   top: 3%;
   left: 3%;
 }
 
-.cutomer_service{
+.cutomer-service{
   position: fixed;
   bottom: 5%;
 }

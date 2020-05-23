@@ -16,7 +16,7 @@
 </van-dialog>
 
 <view wx:if="{{courseList.length>0?true:false}}" class="shareBtn">
-	<button class="menu_button" open-type="share">
+	<button class="menu-button" open-type="share">
 		<van-icon name="share" size="40px" color="#8a8a8a" open-type="share" />
 	</button>
 </view>
@@ -26,53 +26,53 @@
 </view>
 <scroll-view scroll-y="true" class="scroll">
 	<van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
-		<view class="user_avatar">
+		<view class="user-avatar">
 			<open-data type="userAvatarUrl"></open-data>
 		</view>
-		<view class="left_menu_content">
-			<view class="menu_item" bindtap="editCourse">
-				<van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
-			<view class="menu_item" bindtap="toFollowList">
-				<van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
-			<view class="menu_item" bindtap="toOpenTable">
-				<van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
-			<view wx:if="{{courseList.length>0?true:false}}" class="menu_item">
-				<van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
-			<view class="menu_item" bindtap="shouwMap">
-				<van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
-			<!-- 暂不开放上传 -->
-			<!-- <view class="menu_item" bindtap="toUpload">
-					<van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view> -->
+		<view class="left-menu-content">
+			<view class="menu-item" bindtap="editCourse">
+				<van-icon name="edit" /><button class="menu-button" size="mini">Edit</button></view>
+			<view class="menu-item" bindtap="toFollowList">
+				<van-icon name="like-o" /><button class="menu-button" size="mini">Following</button></view>
+			<view class="menu-item" bindtap="toOpenTable">
+				<van-icon name="search" /><button class="menu-button" size="mini">OpenTable</button></view>
+			<view wx:if="{{courseList.length>0?true:false}}" class="menu-item">
+				<van-icon name="share" /><button class="menu-button" size="mini" open-type="share">Share</button></view>
+			<view class="menu-item" bindtap="shouwMap">
+				<van-icon name="location-o" /><button class="menu-button" size="mini">Map</button></view>
+			<!-- 暂不开放上传 this function temporarily closed-->
+			<!-- <view class="menu-item" bindtap="toUpload">
+					<van-icon name="upgrade" /><button class="menu-button" size="mini">Upload</button></view> -->
 			<van-divider />
-			<view class="menu_item">
+			<view class="menu-item">
 				<van-icon name="exchange" />
-				<button class="menu_button" size="mini">Open My Table</button>
+				<button class="menu-button" size="mini">Open My Table</button>
 			</view>
-			<view class="menu_item">
-				<button class="menu_button" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
+			<view class="menu-item">
+				<button class="menu-button" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
 					<van-switch checked="{{ openTable }}" bind:change="" size="18px" active-color="#07c160" /></button>
 
 			</view>
-			<!-- 暂不开放切换主页 -->
-			<!-- <view class="menu_item">
+			<!-- 暂不开放切换主页 this function temporarily closed-->
+			<!-- <view class="menu-item">
 					<van-icon name="exchange" />
-					<button class="menu_button" size="mini">Pic as home</button>
+					<button class="menu-button" size="mini">Pic as home</button>
 				</view>
-				<view class="menu_item">
+				<view class="menu-item">
 					<van-switch checked="{{ picAsHome }}" bind:change="setPicHome" size="18px" active-color="#ee0a24" />
 				</view> -->
-			<view class="cutomer_service">
-				<view class="menu_item">
-					<van-icon name="chat-o" /><button class="menu_button" size="mini" open-type="contact">CustmerService</button></view>
+			<view class="cutomer-service">
+				<view class="menu-item">
+					<van-icon name="chat-o" /><button class="menu-button" size="mini" open-type="contact">CustmerService</button></view>
 			</view>
 		</view>
 
 	</van-popup>
-	<view class="course_container">
+	<view class="course-container">
 		<view>
 			<view wx:for="{{time}}" wx:key="index">
 				<view wx:for="{{weekdays}}" wx:key="index">
-					<view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
+					<view class="timeLine-col" style="margin-left:{{71+(index)*135}}rpx;">
 					</view>
 				</view>
 				<view class="left">
@@ -85,9 +85,9 @@
 
 		<view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="index">
 			<view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
-				<view class="coures_content">{{item.name}}</view>
-				<view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
-				<view class="coures_content">{{item.room}}</view>
+				<view class="coures-content">{{item.name}}</view>
+				<view class="coures-content">{{item.startTime}}-{{item.endTime}}</view>
+				<view class="coures-content">{{item.room}}</view>
 			</view>
 		</view>
 
@@ -96,52 +96,52 @@
 </scroll-view>
 
 
-<view class="sleep_view">
+<view class="sleep-view">
 	<image class="sleep" src="{{imagePath_sleepy}}" mode="widthFix"></image>
 </view>
 
-<view class="weui-footer weui-footer_fixed-bottom">
-	<view class="weui-footer__text">
+<view class="weui-footer weui-footer-fixed-bottom">
+	<view class="weui-footer--text">
 		<image class="sleep" src="{{imagePath_bed}}" mode="widthFix"></image>
 	</view>
 </view>
 <!-- </view> -->
 
-<!-- 如果用户的主页为自己上传的图片 -->
+<!-- 如果用户的主页为自己上传的图片 User can choose their own img as the index page-->
 <!-- <view wx:if="{{picAsHome}}" style="height:100%">
 	<van-popup show="{{ showMenu }}" bind:close="hideLeftMenu" position="left" custom-style="height:100%;width:43%">
-			<view class="user_avatar">
+			<view class="user-avatar">
 				<open-data type="userAvatarUrl"></open-data>
 			</view>
-			<view class="left_menu_content">
-				<view class="menu_item" bindtap="editCourse">
-					<van-icon name="edit" /><button class="menu_button" size="mini">Edit</button></view>
-				<view class="menu_item" bindtap="toFollowList">
-					<van-icon name="like-o" /><button class="menu_button" size="mini">Following</button></view>
-				<view class="menu_item" bindtap="toFollowList">
-					<van-icon name="search" /><button class="menu_button" size="mini">OpenTable</button></view>
-				<view wx:if="{{courseList.length>0?true:false}}" class="menu_item">
-					<van-icon name="share" /><button class="menu_button" size="mini" open-type="share">Share</button></view>
-				<view class="menu_item" bindtap="shouwMap">
-					<van-icon name="location-o" /><button class="menu_button" size="mini">Map</button></view>
-				<view class="menu_item" bindtap="toUpload">
-					<van-icon name="upgrade" /><button class="menu_button" size="mini">Upload</button></view>
+			<view class="left-menu-content">
+				<view class="menu-item" bindtap="editCourse">
+					<van-icon name="edit" /><button class="menu-button" size="mini">Edit</button></view>
+				<view class="menu-item" bindtap="toFollowList">
+					<van-icon name="like-o" /><button class="menu-button" size="mini">Following</button></view>
+				<view class="menu-item" bindtap="toFollowList">
+					<van-icon name="search" /><button class="menu-button" size="mini">OpenTable</button></view>
+				<view wx:if="{{courseList.length>0?true:false}}" class="menu-item">
+					<van-icon name="share" /><button class="menu-button" size="mini" open-type="share">Share</button></view>
+				<view class="menu-item" bindtap="shouwMap">
+					<van-icon name="location-o" /><button class="menu-button" size="mini">Map</button></view>
+				<view class="menu-item" bindtap="toUpload">
+					<van-icon name="upgrade" /><button class="menu-button" size="mini">Upload</button></view>
 				<van-divider />
-				<view class="menu_item">
+				<view class="menu-item">
 					<van-icon name="exchange" />
-					<button class="menu_button" size="mini">Pic as home</button>
+					<button class="menu-button" size="mini">Pic as home</button>
 				</view>
-				<view class="menu_item">
+				<view class="menu-item">
 					<van-switch checked="{{ picAsHome }}" bind:change="setPicHome" size="18px" active-color="#ee0a24" />
 				</view>
 
 			</view>
 
 		</van-popup>
-<view class="pic_home_menu" bindtap="showLeftMenu">
+<view class="pic-home-menu" bindtap="showLeftMenu">
 			<van-icon name="wap-nav" size="30px" />
 		</view>
-	<scroll-view scroll-y="true" class="pic_scroll">
+	<scroll-view scroll-y="true" class="pic-scroll">
 		<image class="pic" src="{{picFileID}}" mode="widthFix"></image>
 	</scroll-view>
 

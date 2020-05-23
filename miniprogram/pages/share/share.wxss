@@ -9,7 +9,7 @@
   background-color: #fff;
   height: 55rpx;
 }
-.top_left{
+.top-left{
   display: flex;
   height: 55rpx;
   width: 75rpx;
@@ -24,12 +24,12 @@
   align-items: center;
 }
 
-.course_container{
+.course-container{
   display:flex;
   background-color: rgb(255, 255, 255);
 }
 
-.timeLine_col{
+.timeLine-col{
  position: absolute;
  width: 1rpx;
  height: 60px;
@@ -52,14 +52,14 @@ background-color:  rgb(243, 238, 238);
   border-radius: 3px;
 }
 
-.coures_content {
+.coures-content {
   font-size: 8pt;
   justify-content: center;
   align-items: top;
   padding-left: 5rpx;
 }
 
-.nav_container{
+.nav-container{
   width: 750rpx;
 }
 

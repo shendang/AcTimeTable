@@ -1,5 +1,5 @@
 <van-sticky>
-	<view wx:if="{{hasFollowed}}" class="nav_container">
+	<view wx:if="{{hasFollowed}}" class="nav-container">
 		<view wx:if="{{showHomeButn}}">
 			<van-nav-bar title="{{tableTitle}}">
 				<van-icon name="wap-home" size="25px" custom-style="margin-bottom: 10px;" slot="left" bind:click="goAppHome" />
@@ -17,7 +17,7 @@
 		</view>
 	</view>
 
-	<view wx:if="{{!hasFollowed}}" class="nav_container">
+	<view wx:if="{{!hasFollowed}}" class="nav-container">
 
 		<view wx:if="{{showHomeButn}}">
 			<van-nav-bar title="{{tableTitle}}">
@@ -64,11 +64,11 @@
 
 <scroll-view class="scroll">
 
-	<view class="course_container">
+	<view class="course-container">
 		<view>
 			<view wx:for="{{time}}" wx:key="index">
 				<view wx:for="{{weekdays}}" wx:key="index">
-					<view class="timeLine_col" style="margin-left:{{71+(index)*135}}rpx;">
+					<view class="timeLine-col" style="margin-left:{{71+(index)*135}}rpx;">
 					</view>
 				</view>
 				<view class="left">
@@ -81,9 +81,9 @@
 
 		<view style="position:absolute;margin-left:73rpx" wx:for="{{courseList}}" wx:key="index">
 			<view class="flex-item course-item" style="margin-left:{{(item.day-1)*135}}rpx;margin-top:{{(item.start-1)*30+2}}px;height:{{item.long*30-2}}px;background-color:{{item.type=='Lab'?'#AAFF99':'#7efff5'}}">
-				<view class="coures_content">{{item.name}}</view>
-				<view class="coures_content">{{item.startTime}}-{{item.endTime}}</view>
-				<view class="coures_content">{{item.room}}</view>
+				<view class="coures-content">{{item.name}}</view>
+				<view class="coures-content">{{item.startTime}}-{{item.endTime}}</view>
+				<view class="coures-content">{{item.room}}</view>
 			</view>
 		</view>
 	</view>
