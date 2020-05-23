@@ -16,19 +16,19 @@
 
 <van-skeleton title avatar row="3" loading="{{loading}}">
 	<view wx:for="{{openTableList}}" wx:key="index">
-		<view class="open_table_card" data-openId="{{item._openid}}" data-title="{{item.title}}" bindtap="showOpenTableDetail">
-			<view class="open_table_card_left">
-				<image class="open_table_user_avatar" src="{{item.avatarUrl}}"></image>
+		<view class="open-table-card" data-openId="{{item._openid}}" data-title="{{item.title}}" bindtap="showOpenTableDetail">
+			<view class="open-table-card-left">
+				<image class="open-table-user-avatar" src="{{item.avatarUrl}}"></image>
 			</view>
-			<view class="open_table_card_right">
-				<view class="open_table_title">
+			<view class="open-table-card-right">
+				<view class="open-table-title">
 					{{item.title}}
 				</view>
-				<view class="open_table_desc">
+				<view class="open-table-desc">
 					<view>Program Name：{{item.program}}</view>
 					<view>Description: {{item.desc}}</view>
 				</view>
-				<!-- <view class="open_table_content-footer">
+				<!-- <view class="open-table-content-footer">
 
 				</view> -->
 			</view>

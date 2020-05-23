@@ -1,9 +1,9 @@
 <van-sticky>
   <view class="top">
-    <view class="sub_title">
+    <view class="sub-title">
       <text>Course List</text>
     </view>
-    <view class="add_button" bindtap="addCourse">
+    <view class="add-button" bindtap="addCourse">
       <van-icon name="add-o" size="28px" />
     </view>
   </view>
@@ -13,16 +13,16 @@
 <van-notify id="van-notify" />
 
 
-<view wx:for="{{courseList}}" wx:key="index" class="course_item">
+<view wx:for="{{courseList}}" wx:key="index" class="course-item">
   <van-panel title="{{item.name}}" use-footer-slot>
-    <view class="course_content">
-      <view class="course_content_item">
+    <view class="course-content">
+      <view class="course-content-item">
         <text>{{item.day}} :  {{item.startTime}} - {{item.endTime}}</text>
       </view>
-      <view class="course_content_item">
+      <view class="course-content-item">
         <text>{{item.room}}</text>
       </view>
-      <view class="course_content_item">
+      <view class="course-content-item">
         <text>{{item.type}}</text>
       </view>
     </view>

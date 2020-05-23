@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.sub_title{
+.sub-title{
   height: 100rpx;
   font-size: 11pt;
   justify-content: center;
@@ -19,7 +19,7 @@
   flex-direction: row;
 }
 
-.save_button{
+.save-button{
   height: 100rpx;
   justify-content: center;
   display: flex;
@@ -27,7 +27,7 @@
   margin-right:30rpx; 
 }
 
-.course_content{
+.course-content{
   margin-top: 3px;
 }
 

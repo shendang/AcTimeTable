@@ -2,21 +2,21 @@
 page{
   background-color: #fff;
 }
-.open_table_card{
+.open-table-card{
   height: 168rpx;
 }
-.open_table_card_left{
+.open-table-card-left{
   height: 168rpx;
   width: 150rpx;
   float:left;
 }
 
-.open_table_card_right{
+.open-table-card-right{
   height: 168rpx;
   overflow: hidden;
 }
 
-.open_table_user_avatar{
+.open-table-user-avatar{
   margin-top: 0px;
   margin-left: 10px;
   width: 86rpx;
@@ -25,11 +25,11 @@ page{
   overflow: hidden;
 }
 
-.open_table_title{
+.open-table-title{
   font-size: 10pt;
 }
 
-.open_table_desc{
+.open-table-desc{
   margin-top: 5px;
   font-size: 9pt;
   color: darkgrey;

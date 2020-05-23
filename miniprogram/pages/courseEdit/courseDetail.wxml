@@ -1,9 +1,9 @@
 <van-sticky>
   <view class="top">
-    <view class="sub_title">
+    <view class="sub-title">
       <text>Course Edit</text>
     </view>
-    <view class="save_button">
+    <view class="save-button">
       <van-button size="small" type="primary" bindtap="saveCourse">Save</van-button>
     </view>
   </view>
@@ -13,7 +13,7 @@
 <van-toast id="van-toast" />
 
 
-<view class="course_content">
+<view class="course-content">
   <van-cell-group>
     <van-field value="{{ name }}" required clearable label="Name"  placeholder="please input course name" bind:change="onNameChange" />
 

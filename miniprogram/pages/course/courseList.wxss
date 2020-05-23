@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.sub_title{
+.sub-title{
   height: 100rpx;
   font-size: 11pt;
   justify-content: center;
@@ -19,7 +19,7 @@
   flex-direction: row;
 }
 
-.add_button{
+.add-button{
   height: 100rpx;
   justify-content: center;
   display: flex;
@@ -27,16 +27,16 @@
   margin-right:30rpx; 
 }
 
-.course_content{
+.course-content{
   margin: 15px auto 15px 30rpx;
   font-size:10pt;
 }
 
-.course_item{
+.course-item{
   margin-bottom: 3px;
 }
 
-.course_content_item{
+.course-content-item{
   font-size: 9pt;
   color: rgb(110, 103, 103);
   margin-bottom: 3px;
