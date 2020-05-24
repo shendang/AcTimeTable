@@ -6,11 +6,32 @@ With this app, you can quickly view your time table on your WeChat as well as yo
 
 The most important function of this app is Share and Follow, which is why I want to build it.
 
-Considering this situation: Plan to go shopping with friends who are also your classmnates, but you dont know when he/she is free, then you want to view his/her timeTable to make the schedule. It's so troubled to ask your friends to sent the time table to you!
+Considering this situation: Plan to go shopping with friends who are also your classmnates, but you dont know when he/she is free, then you want to view his/her timeTable to make the schedule. It's so troubled to ask your friends to sent the time table to you ! With AcTimeTable, it's easily to view your others' time table !
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+## Try it:
+
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/ad.png)
+
+Belows are some screenshots of AcTimeTable:
+
+## Index Page:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/myTable.PNG)
+## Menu Page:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/menu.PNG)
+## Following List:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/followList.PNG)
+## Open tables:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/openList.PNG)
+## The table you followed:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/followingTable.PNG)
+## Share table:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/share.PNG)
+## Edit your table:
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/courseEdit.PNG)
+![image](https://github.com/shendang/AcTimeTable/blob/master/screenshots/courseEdit2.PNG)
+
+
+
 
 ## Reference documentation
 
